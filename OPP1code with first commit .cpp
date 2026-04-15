@@ -31,3 +31,9 @@ public:
     string getName() const override { return "OR"; } 
     string getExplanation() const override { return "True if at least one input is true."; } 
 }; 
+class NotOp : public BooleanOperator { 
+public: 
+    bool evaluate(bool a, bool b = false) const override { return !a; } 
+    string getName() const override { return "NOT"; } 
+    string getExplanation() const override { return "Inverts the input (1 becomes 0, 0 becomes 1)."; } 
+}; 
