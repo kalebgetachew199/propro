@@ -18,3 +18,16 @@ public:
     virtual string getName() const = 0; 
     virtual string getExplanation() const = 0; 
 }; 
+class AndOp : public BooleanOperator { 
+public: 
+    bool evaluate(bool a, bool b) const override { return a && b; } 
+    string getName() const override { return "AND"; } 
+    string getExplanation() const override { return "True only if both inputs are true."; } 
+}; 
+ 
+class OrOp : public BooleanOperator { 
+public: 
+    bool evaluate(bool a, bool b) const override { return a || b; } 
+    string getName() const override { return "OR"; } 
+    string getExplanation() const override { return "True if at least one input is true."; } 
+}; 
