@@ -52,4 +52,5 @@ public:
 void explainOperators(string expr) { 
     cout << "Operators Detected and Explained:" << endl; 
     if (expr.find("AND") != string::npos) cout << "- AND: True only if both true." << endl;
+    if (expr.find("OR") != string::npos) cout << "- OR: True if at least one true." << endl
     
