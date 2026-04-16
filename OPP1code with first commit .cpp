@@ -43,3 +43,9 @@ public:
     string getName() const override { return "XOR"; } 
     string getExplanation() const override { return "True if inputs are different."; } 
 };
+class NandOp : public BooleanOperator { 
+public: 
+    bool evaluate(bool a, bool b) const override { return !(a && b); } 
+    string getName() const override { return "NAND"; } 
+    string getExplanation() const override { return "False only if both inputs are true."; } 
+};
