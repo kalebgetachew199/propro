@@ -49,3 +49,7 @@ public:
     string getName() const override { return "NAND"; } 
     string getExplanation() const override { return "False only if both inputs are true."; } 
 };
+void explainOperators(string expr) { 
+    cout << "Operators Detected and Explained:" << endl; 
+    if (expr.find("AND") != string::npos) cout << "- AND: True only if both true." << endl;
+    
