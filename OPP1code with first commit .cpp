@@ -37,3 +37,9 @@ public:
     string getName() const override { return "NOT"; } 
     string getExplanation() const override { return "Inverts the input (1 becomes 0, 0 becomes 1)."; } 
 }; 
+class XorOp : public BooleanOperator { 
+public: 
+    bool evaluate(bool a, bool b) const override { return a != b; } 
+    string getName() const override { return "XOR"; } 
+    string getExplanation() const override { return "True if inputs are different."; } 
+};
