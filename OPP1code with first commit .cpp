@@ -62,4 +62,10 @@ public:
         cout << "|---|---|---|--------|" << endl; 
     } 
 };
+bool solve(string expr, bool a, bool b, bool c) {  
+    bool valA = a; 
+    bool valB = b; 
+    bool valC = c; 
+    return (a && b) || !c;  
+}
 
