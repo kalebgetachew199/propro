@@ -55,4 +55,11 @@ void explainOperators(string expr) {
     if (expr.find("OR") != string::npos) cout << "- OR: True if at least one true." << endl
     if (expr.find("NOT") != string::npos) cout << "- NOT: Inverts the input." << endl; 
 } 
+class TruthTable { 
+public: 
+    void printHeader() { 
+        cout << "| A | B | C | Result |" << endl; 
+        cout << "|---|---|---|--------|" << endl; 
+    } 
+};
 
