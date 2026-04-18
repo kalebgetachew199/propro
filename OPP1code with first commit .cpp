@@ -4,6 +4,7 @@
 #include <fstream>
 #include <algorithm>
 
+
 using namespace std;
 
 int main() {
@@ -67,5 +68,10 @@ bool solve(string expr, bool a, bool b, bool c) {
     bool valB = b; 
     bool valC = c; 
     return (a && b) || !c;  
+}
+void save(string filename, string data) { 
+    ofstream out(filename); 
+    out << data; 
+    out.close(); 
 }
 
