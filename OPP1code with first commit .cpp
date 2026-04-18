@@ -74,4 +74,9 @@ void save(string filename, string data) {
     out << data; 
     out.close(); 
 }
+void load(string filename) { 
+    ifstream in(filename); 
+    string line; 
+    while(getline(in, line)) cout << line << endl; 
+}
 
