@@ -51,7 +51,7 @@ public:
     string getExplanation() const override { return "False only if both inputs are true."; } 
 };
 void explainOperators(string expr) { 
-    cout << "Operators Detected and Explained:" << endl; 
+    cout << "\nOperators Detected and Explained:" << endl; 
     if (expr.find("AND") != string::npos) cout << "- AND: True only if both true." << endl;
     if (expr.find("OR") != string::npos) cout << "- OR: True if at least one true." << endl;
     if (expr.find("NOT") != string::npos) cout << "- NOT: Inverts the input." << endl; 
@@ -59,14 +59,11 @@ void explainOperators(string expr) {
 class TruthTable { 
 public: 
     void printHeader() { 
-        cout << "| A | B | C | Result |" << endl; 
-        cout << "|---|---|---|--------|" << endl; 
+        cout << "| A | B | C | Result |\n" ; 
+        cout << "|---|---|---|--------|\n"; 
     } 
 };
-bool solve(string expr, bool a, bool b, bool c) {  
-    bool valA = a; 
-    bool valB = b; 
-    bool valC = c; 
+bool solve(bool a, bool b, bool c) {  
     return (a && b) || !c;  
 }
 void save(string filename, string data) { 
