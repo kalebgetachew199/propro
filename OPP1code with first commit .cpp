@@ -7,11 +7,6 @@
 
 using namespace std;
 
-int main() {
-    cout << "*** BOOLEAN TRUTH table simulater ***" << endl;
-    return 0;
-}
-
 class BooleanOperator { 
 public: 
     virtual ~BooleanOperator() {} 
@@ -76,4 +71,35 @@ void load(string filename) {
     string line; 
     while(getline(in, line)) cout << line << endl; 
 }
+int main() {
+    cout << "*** BOOLEAN TRUTH table simulater ***\n";
+
+    TruthTable table;
+    table.printHeader();
+
+    string output = | A | B | C | Result |\n";
+    output =+ "|---|---|---|-------|\n";
+
+    for (int i=0; i< 8; i++){
+        bool a = i & 4;
+        bool b = i & 2;
+        bool c = i & 1;
+
+        bool result = solve (a,b,c);
+
+        cout << " | " << a << " | " << b << " | " << c << " | " << result << "    |\n";
+        
+        output += "| " + to_string(a) + " | " + to_string(b) + " | " + to_string(c) + " |   " + to_string(result) + "    |\n";
+    }
+
+    explainOperators("AND OR NOT");
+
+    
+    save("truth_table.txt", output);
+
+    cout << "\nSaved to truth_table.txt\n";
+
+    return 0;
+}
+
 
